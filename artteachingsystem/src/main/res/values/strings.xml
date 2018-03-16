@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">美术教学软件</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_catalog">CatalogActivity</string>
+    <string name="title_activity_draw">DrawActivity</string>
+    <string name="title_activity_color_picker">ColorPickerActivity</string>
+    <string name="title_activity_stamp_picker">StampPickerActivity</string>
+    <string name="title_activity_choose_grade">ChooseGradeActivity</string>
+    <string name="title_activity_videos">VideosActivity</string>
+    <string name="title_activity_tasks">TasksActivity</string>
+
+    <string name="copyeright_notice">版权声明：课件中涉及到的图片、视频均源于网络，如有侵权请联系我们删除。</string>
+    <string name="url_null">本地地址不能为空!</string>
+    <string name="url_error">填写的IP格式错误!</string>
+
+    <string name="pattern_issued_faild">下发失败，请重试</string>
+    <string name="pattern_issued_success">下发成功</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quit">退出</string>
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n请点击设置，打开所有权限。</string>
+</resources>

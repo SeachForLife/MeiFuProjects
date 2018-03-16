@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carl_yang.art">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 屏蔽HOME键需要的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name="com.carl_yang.ArtTeachiingApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon_teachiing"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/Fullscreen_Appcompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CatalogActivity"
+            android:label="@string/title_activity_catalog"
+            android:screenOrientation="landscape"
+            android:theme="@style/Fullscreen_Appcompat" />
+        <activity
+            android:name=".DrawActivity"
+            android:label="@string/title_activity_draw"
+            android:process=":patterndraw"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ColorPickerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StampPickerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChooseGradeActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FamousAppreciationActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".VideosActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".TasksActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".CourseWareGridActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".CourseContentActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@style/spilttouch_enable" />
+        <activity
+            android:name=".TasksContentActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".PatternActivity"
+            android:process=":pattern"
+            android:screenOrientation="landscape"
+            android:theme="@style/Fullscreen_Appcompat" />
+        <activity
+            android:name=".ShowVideosActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name="com.carl_yang.service.CountTimeService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ExitDialogActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PermissionsActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.versionProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/version_file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ImageZoomActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/TransparentAppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FavoriteActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Fullscreen_Appcompat" />
+        <activity
+            android:name=".UrlSettingActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/UrlSet_Transparent" />
+        <activity
+            android:name=".NewWebVeiwActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:process=":webview"
+            android:screenOrientation="landscape"
+            android:theme="@style/spilttouch_enable" />
+        <activity android:name=".RecordVideoActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Fullscreen_Appcompat"
+            ></activity>
+    </application>
+
+</manifest>

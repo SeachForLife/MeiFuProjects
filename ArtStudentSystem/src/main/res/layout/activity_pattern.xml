@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40_dip">
+
+            <ImageView
+                android:id="@+id/pattern_back"
+                android:layout_width="@dimen/dimen_58_dip"
+                android:layout_height="@dimen/dimen_19_dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back_btn_001"
+                android:onClick="pattern_Click" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="绘制单位纹样"
+                android:textColor="#333333"
+                android:textSize="@dimen/dimen_16_dip" />
+
+            <ImageView
+                android:id="@+id/pattern_send"
+                android:layout_width="@dimen/dimen_49_dip"
+                android:layout_height="@dimen/dimen_19_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_12_dip"
+                android:background="@drawable/btn_001"
+                android:visibility="gone"
+                android:onClick="pattern_Click" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <ListView
+                android:id="@+id/pattern_imagelist"
+                android:layout_width="@dimen/dimen_102_dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_12_dip"
+                android:divider="@color/white"
+                android:dividerHeight="@dimen/dimen_10_dip"
+                android:listSelector="@android:color/transparent" />
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_414_dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dimen_12_dip"
+                android:layout_marginRight="@dimen/dimen_12_dip"
+                android:layout_toRightOf="@+id/pattern_imagelist"
+                android:background="@drawable/border_002"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp">
+
+                    <com.carl_yang.drawfile.view.DrawView
+                        android:id="@+id/pattern_canvas"
+                        android:layout_width="@dimen/dimen_414_dip"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/dimen_5_dip"
+            android:layout_marginRight="@dimen/dimen_12_dip"
+            android:layout_marginTop="@dimen/dimen_10_dip"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="大小调节"
+                android:textColor="@color/draw_ui_bottom"
+                android:textSize="@dimen/dimen_7_dip" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_8_dip"
+                android:layout_height="@dimen/dimen_8_dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimen_7_dip"
+                android:background="@drawable/icon_minus" />
+
+            <SeekBar
+                android:id="@+id/pattern_seekBar"
+                style="@style/Widget.SeekBar"
+                android:layout_width="@dimen/dimen_166_dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_5_dip" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_8_dip"
+                android:layout_height="@dimen/dimen_8_dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimen_5_dip"
+                android:background="@drawable/icon_plus" />
+
+            <LinearLayout
+                android:id="@+id/pattern_color_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dimen_16_dip"
+                android:gravity="center"
+                android:onClick="pattern_Click"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="颜色"
+                    android:textColor="@color/draw_ui_bottom"
+                    android:textSize="@dimen/dimen_7_dip" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_14_dip"
+                    android:layout_height="@dimen/dimen_14_dip"
+                    android:layout_marginLeft="@dimen/dimen_5_dip"
+                    android:id="@+id/pattern_color_image"
+                    android:background="@drawable/color0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pattern_undo_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dimen_20_dip"
+                android:gravity="center"
+                android:onClick="pattern_Click"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="上一步"
+                    android:textColor="@color/draw_ui_bottom"
+                    android:textSize="@dimen/dimen_7_dip" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_10_dip"
+                    android:layout_height="@dimen/dimen_8_dip"
+                    android:layout_marginLeft="@dimen/dimen_5_dip"
+                    android:id="@+id/pattern_undo_image"
+                    android:background="@drawable/icon_arrow_l" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pattern_redo_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dimen_20_dip"
+                android:gravity="center"
+                android:onClick="pattern_Click"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="下一步"
+                    android:textColor="@color/draw_ui_bottom"
+                    android:textSize="@dimen/dimen_7_dip" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_10_dip"
+                    android:layout_height="@dimen/dimen_8_dip"
+                    android:layout_marginLeft="@dimen/dimen_5_dip"
+                    android:id="@+id/pattern_redo_image"
+                    android:background="@drawable/icon_arrow_r" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pattern_del_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_20_dip"
+                android:gravity="center"
+                android:onClick="pattern_Click"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="清空"
+                    android:textColor="@color/draw_ui_bottom"
+                    android:textSize="@dimen/dimen_7_dip" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_8_dip"
+                    android:layout_height="@dimen/dimen_10_dip"
+                    android:layout_marginLeft="@dimen/dimen_5_dip"
+                    android:background="@drawable/icon_del" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dimen_43_dip"
+                android:layout_height="@dimen/dimen_15_dip"
+                android:layout_marginLeft="@dimen/dimen_10_dip"
+                android:background="@drawable/btn_002"
+                android:onClick="pattern_Click"
+                android:id="@+id/pattern_create"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/pattern_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/pattern_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff000000" />
+
+        <com.bm.library.PhotoView
+            android:id="@+id/pattern_photoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</RelativeLayout>

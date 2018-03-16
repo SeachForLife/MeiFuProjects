@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/spinner_item"
+    android:paddingLeft="@dimen/dimen_5_dip"
+    android:paddingRight="@dimen/dimen_2_dip"
+    android:gravity="center_vertical"
+    android:textColor="@color/black_common_font"
+    android:textSize="@dimen/dimen_9_dip"
+    />

@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.2"
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    defaultConfig {
+        applicationId "com.carl_yang.art"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/common',
+                            'src/main/res/layouts/draw',
+                            'src/main/res/layouts/exit',
+                            'src/main/res/layouts/famous',
+                            'src/main/res/layouts/favorite',
+                            'src/main/res/layouts/main',
+                            'src/main/res/layouts/other',
+                            'src/main/res/layouts/recordvideo',
+                            'src/main/res/layouts/special',
+                            'src/main/res/layouts/task',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
+}
+
+repositories {
+    mavenCentral() // jcenter() works as well because it pulls from Maven Central
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.SeachForLife:pUpVersion:1.4'
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+}

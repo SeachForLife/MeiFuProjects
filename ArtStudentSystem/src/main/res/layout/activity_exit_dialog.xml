@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_exit_dialog"
+    android:layout_width="@dimen/dimen_214_dip"
+    android:layout_height="@dimen/dimen_170_dip"
+    android:background="@drawable/ex_dialog_bg"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/dimen_48_dip"
+        android:layout_height="@dimen/dimen_46_dip"
+        android:layout_marginTop="@dimen/dimen_41_dip"
+        android:layout_marginLeft="@dimen/dimen_22_dip"
+        android:id="@+id/ex_dialog_imageview"
+        />
+
+    <TextView
+        android:layout_width="@dimen/dimen_128_dip"
+        android:layout_height="@dimen/dimen_26_dip"
+        android:layout_marginLeft="@dimen/dimen_46_dip"
+        android:layout_marginTop="@dimen/dimen_106_dip"
+        android:id="@+id/ex_dialog_button"
+        android:clickable="true"
+        />
+
+</RelativeLayout>

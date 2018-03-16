@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/videosgridview_rootview"
+    >
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_156_dip"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/videosgridview_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <ImageView
+            android:layout_width="@dimen/dimen_30_dip"
+            android:layout_height="@dimen/dimen_30_dip"
+            android:background="@drawable/ic_videoplay"
+            android:layout_centerInParent="true"
+            android:id="@+id/videosgridview_videoicon"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/videosgridview_str"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/dimen_8_dip"
+        android:gravity="center"
+        android:text="一年级(上册)"
+        android:textColor="#555555"
+        android:textSize="@dimen/dimen_10_dip" />
+    <TextView
+        android:id="@+id/videosgridview_str1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/dimen_8_dip"
+        android:gravity="center"
+        android:text="一年级(上册)"
+        android:textColor="#555555"
+        android:textSize="@dimen/dimen_9_dip" />
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_32_dip"
+            android:background="@color/bg_color"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/favorite_back"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_12_dip"
+                android:layout_marginTop="@dimen/dimen_11_dip"
+                android:layout_weight="1"
+                android:gravity="left|center_horizontal"
+                android:onClick="favorite_click"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_6_dip"
+                    android:layout_height="@dimen/dimen_12_dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_14_dip"
+                    android:background="@drawable/back_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/dimen_4_dip"
+                    android:gravity="bottom"
+                    android:text="主屏幕"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_10_dip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_7_dip"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/favorite_temporary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="favorite_click"
+                    android:padding="@dimen/dimen_2_dip"
+                    android:text="课堂资源"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_10_dip" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_10_dip"
+                >
+
+                <com.andview.refreshview.XRefreshView
+                    android:id="@+id/favorite_xrefreshview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/favorite_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:scrollbars="vertical" />
+                </com.andview.refreshview.XRefreshView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/favorite_video_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/favorite_video_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/video_prepared"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dimen_15_dip"
+            android:text="视频加载中,请稍后..."
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            />
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/favorite_video"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

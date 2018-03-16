@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_102_dip"
+    android:layout_height="@dimen/dimen_59_dip"
+    android:gravity="center"
+    android:background="@drawable/border_001"
+    >
+
+    <ImageView
+        android:id="@+id/imagelistview_image"
+        android:layout_width="@dimen/dimen_102_dip"
+        android:layout_height="@dimen/dimen_59_dip"
+        android:scaleType="fitCenter"
+        android:padding="3dp"
+         />
+
+</LinearLayout>

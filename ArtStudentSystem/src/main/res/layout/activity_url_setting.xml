@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_hand_task"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_56_dip"
+        android:orientation="vertical"
+        android:id="@+id/handtask_linlayout"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/tan_pic0"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_28_dip"
+            android:text="请在下面输入本地地址:"
+            android:textSize="@dimen/dimen_10_dip"
+            android:textColor="#2cc4a0"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="@dimen/dimen_156_dip"
+            android:layout_height="1px"
+            android:layout_gravity="center"
+            android:background="@drawable/tan_line"
+            />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_28_dip"
+            android:text="192.168.1.88"
+            android:textSize="@dimen/dimen_10_dip"
+            android:textColor="#2cc4a0"
+            android:gravity="center"
+            android:id="@+id/urlset_value"
+            android:background="@drawable/edittext"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_28_dip"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_6_dip"
+        android:layout_below="@+id/handtask_linlayout"
+        android:background="@drawable/tan_pic1"
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_28_dip"
+            android:text="确定"
+            android:textSize="@dimen/dimen_8_dip"
+            android:textColor="#2cc4a0"
+            android:gravity="center"
+            android:onClick="onSettingClick"
+            android:id="@+id/urlset_sure"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_32_dip"
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_12_dip"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_11_dip"
+                android:orientation="horizontal"
+                android:gravity="left|center_horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_6_dip"
+                    android:layout_height="@dimen/dimen_12_dip"
+                    android:background="@drawable/back_arrow"
+                    android:layout_marginLeft="@dimen/dimen_14_dip"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:text="作业列表"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:layout_marginLeft="@dimen/dimen_4_dip"
+                    android:id="@+id/tasks_content_back"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_7_dip"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:text="美术一班"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:id="@+id/tasks_content_title"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_10_dip"
+                android:gravity="right">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:id="@+id/student_up_layout"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vote_icon"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/dimen_7_dip"
+                    android:layout_marginRight="@dimen/dimen_11_dip"
+                    android:gravity="right|center"
+                    android:text="未交作业学生"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:id="@+id/tasks_content_nouptask"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tasks_content_fragment"
+                ></FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_26_dip"
+            android:paddingTop="@dimen/dimen_4_dip"
+            android:paddingBottom="@dimen/dimen_4_dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/copyeright_notice"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dimen_7_dip"
+                android:layout_gravity="center"
+                android:background="@drawable/flag"
+                />
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/course_ware_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="@dimen/dimen_16_dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:paddingBottom="@dimen/dimen_16_dip"
+            android:paddingLeft="@dimen/dimen_16_dip"
+            android:paddingRight="@dimen/dimen_16_dip"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/dimen_16_dip"></GridView>
+
+    </LinearLayout>
+</FrameLayout>

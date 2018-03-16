@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg3"
+        android:weightSum="9">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="选择年级"
+                android:textColor="#3CA7ED"
+                android:id="@+id/choose_grade_title"
+                android:textSize="@dimen/dimen_11_dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_164_dip"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:layout_marginTop="2px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/choose_grade"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:dividerHeight="1px"
+                    android:listSelector="@android:color/transparent"
+                    android:divider="#e4e4e4"
+                    >
+
+                </ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#F4FBFF"
+                android:id="@+id/choose_class_layout"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/choose_class"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:dividerHeight="1px"
+                    android:listSelector="@android:color/transparent"
+                    android:divider="#e4e4e4"
+                    >
+
+                    </ListView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:layout_marginTop="2px"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="@dimen/dimen_142_dip"
+                android:layout_height="@dimen/dimen_20_dip"
+                android:background="@drawable/bg7"
+                android:gravity="center"
+                android:text="下一步"
+                android:id="@+id/choose_next"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

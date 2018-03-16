@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="collect_filter">
+        <item>全部</item>
+        <item>美术</item>
+        <item>书法</item>
+        <item>摄影</item>
+    </string-array>
+
+</resources>

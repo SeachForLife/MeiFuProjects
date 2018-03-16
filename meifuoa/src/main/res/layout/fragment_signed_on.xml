@@ -1,0 +1,220 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/signoed_chooselayout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_40_dip"
+            android:layout_gravity="center"
+            android:onClick="main_map_click"
+            android:orientation="horizontal"
+
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.5"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center|left"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:layout_marginLeft="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    android:text="选择企业:" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="5"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center|left"
+                    android:id="@+id/signo_selectedcustomer"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="@dimen/dimen_16_dip"
+                    android:layout_height="@dimen/dimen_13_dip"
+                    android:layout_marginRight="@dimen/dimen_18_dip"
+                    android:background="@drawable/icon_check" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_1_dip">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dimen_18_dip"
+                android:layout_marginRight="@dimen/dimen_18_dip"
+                android:background="@drawable/bg_line"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_40_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="签到时间:"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text=""
+                    android:id="@+id/signo_in_time_day"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimen_31_dip" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text=""
+                    android:id="@+id/signo_in_time_hour"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:layout_marginRight="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_40_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="签退时间:"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center|bottom"
+                    android:id="@+id/signo_out_time_day"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimen_31_dip"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text=""
+                    android:id="@+id/signo_out_time_hour"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:layout_marginRight="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_40_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="在线时长:"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:id="@+id/signo_out_time_online"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dimen_18_dip"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text=""
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:layout_marginRight="@dimen/dimen_18_dip"
+                    android:textColor="#9b9b9b"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="@dimen/dimen_94_dip"
+                    android:layout_height="@dimen/dimen_94_dip"
+                    android:background="@drawable/bg_3"
+                    android:text="签到"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:id="@+id/signo_button"
+                    android:onClick="main_map_click"
+                     />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

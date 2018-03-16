@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_40_dip"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center|left"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:layout_marginLeft="@dimen/dimen_18_dip"
+                    android:text="企业名称:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="6"
+                >
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:hint="请输入名称"
+                    android:textSize="@dimen/dimen_12_dip"
+                    android:textColorHint="#333333"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/add_customer_newAdr"
+                    android:background="@android:color/transparent"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_1_dip">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dimen_18_dip"
+                android:layout_marginRight="@dimen/dimen_18_dip"
+                android:background="@drawable/bg_line"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_135_dip"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="当前地址:"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:id="@+id/add_customer_currentAdr"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="@dimen/dimen_200_dip"
+                android:layout_height="@dimen/dimen_40_dip"
+                android:text="保存"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_2"
+                android:id="@+id/add_customer_save"
+                android:onClick="main_map_click"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

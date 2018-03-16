@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/dimen_40_dip"
+    android:orientation="vertical"
+    android:minHeight="@dimen/dimen_40_dip"
+    >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/listview_customervalue"
+        android:text="打的费"
+        android:gravity="center|left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/dimen_12_dip"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/listview_customeraddress"
+        android:text="的地方的说法"
+        android:gravity="center|left"
+        android:textSize="@dimen/dimen_11_dip"
+        />
+
+</LinearLayout>

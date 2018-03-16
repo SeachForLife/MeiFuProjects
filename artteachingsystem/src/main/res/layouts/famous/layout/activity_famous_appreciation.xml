@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:carl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/famous_realtlayout"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/famous_center_badnet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="轻触屏幕重新加载"
+        android:textColor="@color/result_minor_text"
+        android:textSize="18sp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_32_dip"
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_12_dip"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_10_dip"
+                android:orientation="horizontal"
+                android:gravity="left|center_horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_5_dip"
+                    android:layout_height="@dimen/dimen_12_dip"
+                    android:background="@drawable/back_arrow"
+                    android:layout_marginLeft="@dimen/dimen_14_dip"
+                    android:layout_gravity="center"
+                    />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:text="主屏幕"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:layout_marginLeft="@dimen/dimen_4_dip"
+                    android:onClick="famous_click"
+                    android:id="@+id/famous_mainback"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_8_dip"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/title_bg1_h"
+                    android:gravity="center"
+                    android:text="教师课件"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:onClick="famous_click"
+                    android:id="@+id/famous_teacher"
+                    android:padding="@dimen/dimen_2_dip"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/title_bg2"
+                    android:gravity="center"
+                    android:text="中国美术史"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:onClick="famous_click"
+                    android:id="@+id/famous_china"
+                    android:padding="@dimen/dimen_2_dip"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/title_bg3"
+                    android:gravity="center"
+                    android:text="世界美术史"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:onClick="famous_click"
+                    android:id="@+id/famous_world"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dimen_2_dip"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_4_dip"
+                android:gravity="right">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_20_dip"
+                    android:layout_height="@dimen/dimen_20_dip"
+                    android:layout_gravity="center"
+                    android:id="@+id/famous_appreciation_images"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/dimen_7_dip"
+                    android:layout_marginRight="@dimen/dimen_11_dip"
+                    android:gravity="right|center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_10_dip"
+                    android:id="@+id/famous_appreciation_teachername"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.carl_yang.progress.HProgressBarLoading
+            android:id="@+id/famous_top_progress"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            carl:max="100"
+            carl:progressColor="#0AC416"
+            carl:progressHeight="8"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <!--<WebView-->
+                <!--android:id="@+id/webview"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+            <!--</WebView>-->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/famous_appreciation_fragment"
+                ></FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

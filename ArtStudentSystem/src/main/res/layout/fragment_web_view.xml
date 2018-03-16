@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:carl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <TextView
+        android:id="@+id/fragment_center_badnet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="轻触屏幕重新加载"
+        android:textColor="@color/result_minor_text"
+        android:textSize="@dimen/dimen_7_dip"
+        android:visibility="invisible"/>
+
+    <com.carl_yang.progress.HProgressBarLoading
+        android:id="@+id/fragment_top_progress"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        carl:max="100"
+        carl:progressColor="#0AC416"
+        carl:progressHeight="8"
+        />
+
+    <WebView
+        android:id="@+id/fragment_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </WebView>
+
+</FrameLayout>
